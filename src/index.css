@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html {
+    scrollbar-width: none; 
+    overflow-y: scroll; 
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    display: none; 
+    scroll-behavior: s;
+}  
+h1{
+    font-family: cursive;
+
+}
+.para{
+    font-family: cursive;
+}
