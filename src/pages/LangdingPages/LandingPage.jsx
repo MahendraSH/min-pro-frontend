@@ -2,9 +2,9 @@ import React from "react";
 import CardOverlay from "../../components/Cards/CardOverlay";
 import Herosection from "../../components/Herosection";
 import CenINFeatures from "../CenIN/CenINFeatures.jsx";
-import data from "../../data/home/homeLading.json";
+// import data from "../../data/home/homeLading.json";
 const LandingPage = () => {
-  const { some } = JSON.parse(JSON.stringify(data));
+  // const { some } = JSON.parse(JSON.stringify(data));
   const MainheroContent = {
     subheading: `
             Counting everyone once, only once, and in the right place...`,

@@ -4,21 +4,22 @@ import MainHeading from "./MainLandingPage/MainHeading";
 const Herosection = (props) => {
   return (
     <div
-      className="hero min-h-screen "
+      className="hero min-h-screen bg-dark  "
       style={{
-        backgroundImage: `url("https://res.cloudinary.com/dranaclni/image/upload/v1684320559/cenIN/MainHero_esipxn.png")`,
+        backgroundImage: `url("https://res.cloudinary.com/dranaclni/image/upload/v1685855048/cenIN/Recording_2023-06-04_102525_AdobeExpress_ybwclf.gif")`,
+        // backgroundImage : '('../../public/svg.html')'
       }}
     >
-      <div className="hero-overlay  bg-opacity-30"></div>
+      <div className="hero-overlay  "></div>
       <div className="hero-content text-center text-neutral-content">
         <div className="max-w-md">
           <h1 className="mb-5 text-4xl font-bold lg:text-7xl">
             <MainHeading />
           </h1>
-          <h3 className="mb-5 text-2xl  text-gray-300">
+          <h3 className="mb-5 text-2xl  text-gray-900">
             {props.data.subheading}
           </h3>
-          <p className="mb-5 text-slate-200  text-lg ">{props.data.para}</p>
+          <p className="mb-5 text-gray-950  font-semibold text-lg ">{props.data.para}</p>
         </div>
       </div>
     </div>

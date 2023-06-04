@@ -16,7 +16,7 @@ module.exports = {
     rtl: false,
     prefix: "",
     darkTheme: "dark",
-    themes: ["light","dark"],
+    themes: ["fantasy"],
 
 
   },

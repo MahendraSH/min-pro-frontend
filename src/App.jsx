@@ -25,6 +25,8 @@ import CenINOne from "./pages/CenIN/CenINOne";
 import WorldVisual from "./pages/CenIN/WorldVisual";
 import Predictive from "./pages/CenIN/Predictive";
 import About from "./pages/LangdingPages/About";
+import Contact from "./pages/LangdingPages/Contact";
+import DisplayBlog from "./pages/Blog/DisplayBlog";
 // import AdminRoute from "./components/Routes/AdminRoute.jsx";
 const App = () => {
   const dispatch = useDispatch();
@@ -55,12 +57,13 @@ const App = () => {
           >
             <Route path="/blog" element={<Main />} />
             <Route path="/blog/create" element={<CreateBlog />} />
+            <Route path="/blog/:id" element={<DisplayBlog/>} />
             <Route path="/myprofile" element={<MyProfile />} />
           </Route>
 
           <Route path="/galary" element={<Galary />} />
           <Route path="/about" element={<About/>} />
-          <Route path="/contact" element={<h1>Contact</h1>} />
+          <Route path="/contact" element={<Contact/>} />
           <Route
             element={
               <LoginRoute

@@ -2,13 +2,13 @@ import React from 'react'
 
 const MainHeading = () => {
   return (
-    <div>
+    <div className=''>
       
       <>
-        <span className="text-accent">In</span>di
-        <span className=" text-success">an</span>{" "}
-        <span className="text-blue-700">Census</span>{" "}
-        <span className="text-slate-300">Visualization</span>
+        <span className="text-accent-focus ">In</span>di
+        <span className=" text-green-400">an</span>{" "}
+        <span className="text-slate-900">Census</span>{" "}
+        <span className="text-slate-900">Visualization</span>
       </>
     </div>
   );

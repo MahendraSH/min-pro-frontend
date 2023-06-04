@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-const CardCenINLanding = ({linkto,title,image}) => {
+const CardCenINLanding = ({linkto,title,image ,des}) => {
   return (
     <Link to={linkto}>
       <div className="card card-side bg-base-100 shadow-xl shadow-base-content  m-1  p-3  :translate-x-1   ">
@@ -15,7 +15,7 @@ const CardCenINLanding = ({linkto,title,image}) => {
         </figure>
         <div className="card-body">
           <h2 className="card-title text-primary hover:btn-link"> {title}</h2>
-          <p>Click the button to watch on Jetflix app.</p>
+          <p>{des} </p>
           <div className="card-actions justify-end"></div>
         </div>
       </div>
