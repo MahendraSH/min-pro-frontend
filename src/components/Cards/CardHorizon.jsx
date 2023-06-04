@@ -24,8 +24,8 @@ const Cards = ({ title, summary, mainImage, id, createdAt ,userName,avatar}) => 
       </div> 
     </div> */}
 
-      <div className="p-4 md:w-1/3">
-        <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+      <div className="p-3 lg:w-1/3  shadow-xl rounded-md bg-base-200  shadow-base-content mt-2  md:w-1/2">
+        <div className="h-full  rounded-md bg-base-300  overflow-hidden  ">
           <img
             className="lg:h-48 md:h-36 w-full object-cover object-center"
             src={mainImage.url}
@@ -35,11 +35,9 @@ const Cards = ({ title, summary, mainImage, id, createdAt ,userName,avatar}) => 
             <h2 className="tracking-widest text-md title-font   mb-1  first-letter:capitalize">
               <div className="avatar">
                 <div className="w-4 rounded-full">
-                  <img src={avatar.url}  alt="createer" />
+                  <img src={avatar.url} alt="createer" />
                 </div>
-              </div>
-              {" "}
-
+              </div>{" "}
               {userName}
             </h2>
             <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
@@ -117,3 +115,4 @@ export default Cards;
 //      </div>
 //  </div> */
 //  }
+

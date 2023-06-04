@@ -21,9 +21,9 @@ const Main = () => {
       {loading ? (
         <Loader />
       ) : (
-        <section className="text-gray-600 body-font">
-          <div className="container px-5 py-24 mx-auto">
-            <div className="md:flex flex-wrap -m-4 ">
+        <section className="text-gray-600 body-font bg-gradient-to-br  ">
+          <div className=" px-2 py-4 container mx-auto">
+            <div className="md:flex flex-wrap   ">
               {blogs &&
                 blogs.map((blog) => {
                   return (
