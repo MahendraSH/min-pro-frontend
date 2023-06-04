@@ -2,14 +2,13 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 // import { formatISO9075 } from "data-fns";
 import { useParams } from "react-router-dom";
-
-axios.defaults.withCredentials = true;
+axios.defaults.withCredentials=true;
 const DisplayBlog = () => {
   const [postInfo, setPostInfo] = useState(null);
   const { id } = useParams();
   const api = process.env.REACT_APP_API_URL + "\\api\\post\\" + id;
   useEffect(() => {
-    fetch(api).then((response) => {
+    axios(api).then((response) => {
       response.json().then((postInfo) => {
         setPostInfo(postInfo);
       });

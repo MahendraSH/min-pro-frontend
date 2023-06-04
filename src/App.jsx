@@ -98,7 +98,7 @@ const App = () => {
             <Route path="/admin" element={<PredictiveInserton />} />
           </Route>
         </Route>
-        <Route path="/*" element={<PageNotFound />} />
+        <Route  element={<PageNotFound />} />
       </Routes>
     </>
   );
