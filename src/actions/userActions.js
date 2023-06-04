@@ -14,7 +14,7 @@ import {
     CLEAR_ERRORS,
 } from '../contains/userContains';
 import axios from 'axios';
-
+axios.defaults.withCredentials = true;
 export const login = (email, password) => async (dispatch) => {
     try {
         dispatch({ type: USER_LOGIN_REQUEST });
