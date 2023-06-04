@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import CardOverlay from "../../components/Cards/CardOverlay";
 import Herosection from "../../components/Herosection";
 import CenINFeatures from "../CenIN/CenINFeatures.jsx";
@@ -29,7 +29,11 @@ const LandingPage = () => {
         {/* {some.map((item, index) => {
           return <CardOverlay key={index} {...item} />;
         })} */}
+        
+        <Suspense fallback={<div>Loading...</div>}>
+
         <CardOverlay />
+        </Suspense>
       {/* </article> */}
     </section>
   );

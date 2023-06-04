@@ -12,11 +12,11 @@ html {
 html::-webkit-scrollbar {
     display: none; 
     scroll-behavior: s;
+    font :"roboto"
 }  
 h1{
-    font-family: cursive;
-
+    font:"Droid Sans"
 }
 .para{
-    font-family: cursive;
+    font:"Droid Sans"
 }

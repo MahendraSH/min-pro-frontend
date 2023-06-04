@@ -26,7 +26,10 @@ const DisplayBlog = () => {
       ) : (
         blog && (
           <div>
+
+            
             <h1>{blog.title}</h1>
+
             {console.log(blog)}
             <div
               className="content"

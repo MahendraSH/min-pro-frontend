@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 const CardOverlay = () => {
   // console.log("url", url, "title", title, "dis", dis);
 
@@ -17,11 +17,13 @@ const CardOverlay = () => {
     // </div>
     <>
       <div className=" min-h-screen    w-full  overflow-x-hidden  ">
-        <iframe
-          title="feature"
-          className=" w-[102%]  min-h-screen overflow-hidden "
-          src="https://min-census-data-v.onrender.com/"
-        ></iframe>
+        <Suspense fallback={<div>Loading...</div>}>
+          <iframe
+            title="feature"
+            className=" w-[102%]  min-h-screen overflow-hidden "
+            src="https://min-census-data-v.onrender.com/"
+          ></iframe>
+        </Suspense>
       </div>
     </>
   );

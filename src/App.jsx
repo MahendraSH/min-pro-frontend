@@ -32,14 +32,15 @@ import PredictiveInserton from "./pages/CenIN/PredictiveInserton";
 const App = () => {
   // const dispatch = useDispatch();
 
+
   const user = useSelector((state) => state.user);
 
   useEffect(() => {
-    WebFont.load({
-      google: {
-        families: ["Roboto", "Droid Sans", "Chilanka"],
-      },
-    });
+    // WebFont.load({
+    //   google: {
+    //     families: ["Roboto", "Droid Sans", "Chilanka"],
+    //   },
+    // });
 
     store.dispatch(loadUser());
   }, []);
