@@ -1,33 +1,40 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 // import { formatISO9075 } from "data-fns";
 import { useParams } from "react-router-dom";
-axios.defaults.withCredentials=true;
+import { clearErrors, getBlogDetails } from "../../actions/blogActions";
+import { enqueueSnackbar } from "notistack";
+import Loader from "../../components/Loader";
 const DisplayBlog = () => {
-  const [postInfo, setPostInfo] = useState(null);
   const { id } = useParams();
-  const api = process.env.REACT_APP_API_URL + "\\api\\post\\" + id;
-  useEffect(() => {
-    axios(api).then((response) => {
-      response.json().then((postInfo) => {
-        setPostInfo(postInfo);
-      });
-    });
-  }, []);
-  console.log(id);
 
-  if (!postInfo) return "";
-  const { blog } = postInfo;
+  const { error, loading, blog } = useSelector((state) => state.blogs);
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    if (error) {
+      enqueueSnackbar(error, { variant: "error" });
+      dispatch(clearErrors());
+    }
+    dispatch(getBlogDetails(id));
+  }, [dispatch, error, id]);
+
   return (
     <>
-      <h1>{blog.title}</h1>
-      {console.log(blog.title)}
-      {/* <div>{blog.paras}</div> */}
-      <div
-        className="content"
-        dangerouslySetInnerHTML={{ __html: blog.paras }}
-      />
-      <p>{blog.mainContent}</p>
+      {loading ? (<Loader />) :(
+    blog && (
+        <div>
+          <h1>{blog.title}</h1>
+          {console.log(blog)}
+          <div>{blog.paras}</div>
+          <div
+            className="content"
+            dangerouslySetInnerHTML={{ __html: blog.paras }}
+          />
+          <p>{blog.mainContent}</p>
+        </div>
+      )
+      )}
     </>
   );
 };

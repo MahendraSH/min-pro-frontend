@@ -5,6 +5,9 @@ import {
     CREATE_BLOG_REQUEST,
     CREATE_BLOG_SUCCESS,
     CREATE_BLOG_FAIL,
+    GET_BLOG_DETAILS_REQUEST,
+    GET_BLOG_DETAILS_FAIL,
+    GET_BLOG_DETAILS_SUCCESS,
 
     CLEAR_ERRORS,
 
@@ -49,6 +52,22 @@ export const getAllBlogs = () => async (dispatch) => {
     }
 }
 
-export const  clearErrors = () => async (dispatch) => {
+export const getBlogDetails = (id ) => async (dispatch) => {
+    try {
+        dispatch({ type: GET_BLOG_DETAILS_REQUEST });
+
+        const { data } = await axios.get(process.env.REACT_APP_API_URL + '/api/post/'+id);
+
+        dispatch({ type: GET_BLOG_DETAILS_SUCCESS, payload: data.blog});
+    } catch (error) {
+        dispatch({
+            type: GET_BLOG_DETAILS_FAIL,
+            payload: error.response.data.message,
+        });
+    }
+}
+
+
+export const clearErrors = () => async (dispatch) => {
     dispatch({ type: CLEAR_ERRORS });
 }

@@ -13,7 +13,7 @@ import AllUsers from "./pages/AdminPages/AllUsers";
 import WebFont from "webfontloader";
 import Logout from "./pages/User/Logout.jsx";
 import { loadUser } from "./actions/userActions";
-import { useDispatch, useSelector } from "react-redux";
+import {  useSelector } from "react-redux";
 import MyProfile from "./pages/User/MyProfile.jsx";
 import CreateBlog from "./pages/Blog/CreateBlog.jsx";
 import CenINEleven from "./pages/CenIN/CenINEleven.jsx";
@@ -30,7 +30,7 @@ import DisplayBlog from "./pages/Blog/DisplayBlog";
 import PredictiveInserton from "./pages/CenIN/PredictiveInserton";
 // import AdminRoute from "./components/Routes/AdminRoute.jsx";
 const App = () => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   const user = useSelector((state) => state.user);
 
