@@ -21,19 +21,26 @@ const Main = () => {
       {loading ? (
         <Loader />
       ) : (
-        <section className=" P-4 m-4 shadow-lx lg:columns-3 md:columns-2 gap-x-0.5 ">
-          {blogs &&
-            blogs.map((blog) => {
-              return (
-                <Cards
-                  key={blog._id}
-                  id={blog._id}
-                  title={blog.title}
-                  summary={blog.summary}
-                  mainImage={blog.mainImage}
-                />
-              );
-            })}
+        <section className="text-gray-600 body-font">
+          <div className="container px-5 py-24 mx-auto">
+            <div className="md:flex flex-wrap -m-4 ">
+              {blogs &&
+                blogs.map((blog) => {
+                  return (
+                    <Cards
+                      key={blog._id}
+                      id={blog._id}
+                      title={blog.title}
+                      summary={blog.summary}
+                      mainImage={blog.mainImage}
+                      createdAt={blog.createdAt}
+                      userName={blog.author.name}
+                      avatar={blog.author.avatar}
+                    />
+                  );
+                })}
+            </div>
+          </div>
         </section>
       )}
     </>

@@ -1,12 +1,34 @@
-import React from "react";
-import { Link } from "react-daisyui";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+// import { formatISO9075 } from "data-fns";
+import { useParams } from "react-router-dom";
 
-const DisplayBlog = (parms) => {
-  console.log(parms.id);
+axios.defaults.withCredentials = true;
+const DisplayBlog = () => {
+  const [postInfo, setPostInfo] = useState(null);
+  const { id } = useParams();
+  const api = process.env.REACT_APP_API_URL + "\\api\\post\\" + id;
+  useEffect(() => {
+    fetch(api).then((response) => {
+      response.json().then((postInfo) => {
+        setPostInfo(postInfo);
+      });
+    });
+  }, []);
+  console.log(id);
+
+  if (!postInfo) return "";
+  const { blog } = postInfo;
   return (
     <>
-    
-      
+      <h1>{blog.title}</h1>
+      {console.log(blog.title)}
+      {/* <div>{blog.paras}</div> */}
+      <div
+        className="content"
+        dangerouslySetInnerHTML={{ __html: blog.paras }}
+      />
+      <p>{blog.mainContent}</p>
     </>
   );
 };
@@ -226,5 +248,5 @@ export default DisplayBlog;
 //       </section>
 
 //   )
-  
+
 // }
