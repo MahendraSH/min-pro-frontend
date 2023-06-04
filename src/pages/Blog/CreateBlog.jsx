@@ -38,7 +38,7 @@ const CreateBlog = () => {
     }
     if (message) {
       enqueueSnackbar(message, { variant: "success" });
-      history("/blog");
+      history("/");
     }
   }, [dispatch, error, message, history]);
 

@@ -21,19 +21,20 @@ const DisplayBlog = () => {
 
   return (
     <>
-      {loading ? (<Loader />) :(
-    blog && (
-        <div>
-          <h1>{blog.title}</h1>
-          {console.log(blog)}
-          <div>{blog.paras}</div>
-          <div
-            className="content"
-            dangerouslySetInnerHTML={{ __html: blog.paras }}
-          />
-          <p>{blog.mainContent}</p>
-        </div>
-      )
+      {loading ? (
+        <Loader />
+      ) : (
+        blog && (
+          <div>
+            <h1>{blog.title}</h1>
+            {console.log(blog)}
+            <div
+              className="content"
+              dangerouslySetInnerHTML={{ __html: blog.paras }}
+            />
+            <p>{blog.mainContent}</p>
+          </div>
+        )
       )}
     </>
   );
