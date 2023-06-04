@@ -42,7 +42,7 @@ const App = () => {
     });
 
     store.dispatch(loadUser());
-  }, [dispatch]);
+  }, []);
   return (
     <>
       <Routes>
