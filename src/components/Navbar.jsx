@@ -122,7 +122,7 @@ const Navbar = () => {
                   </li> */}
                   {user.role === "admin" ? (
                     <li>
-                      <Link to="/admin">Dashbrod</Link>
+                      <Link to="/admin">Predictive  insertion</Link>
                     </li>
                   ) : null}
                   <li>

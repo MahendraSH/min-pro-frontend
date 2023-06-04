@@ -4,7 +4,7 @@ import './index.css';
 import App from './App.jsx';
 
 import { Provider } from 'react-redux'
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, HashRouter } from 'react-router-dom';
 import store from './store';
 
 import { SnackbarProvider } from "notistack";
@@ -15,12 +15,13 @@ root.render(
   <SnackbarProvider maxSnack={3} autoHideDuration={3000} anchorOrigin={{
     vertical: "bottom", horizontal: "center"
   }} >
+    <HashRouter>
 
-    <BrowserRouter>
       <Provider store={store}>
         <App />
       </Provider>
-    </BrowserRouter>
+    </HashRouter>
+
   </SnackbarProvider>
 );
 

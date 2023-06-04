@@ -27,6 +27,7 @@ import Predictive from "./pages/CenIN/Predictive";
 import About from "./pages/LangdingPages/About";
 import Contact from "./pages/LangdingPages/Contact";
 import DisplayBlog from "./pages/Blog/DisplayBlog";
+import PredictiveInserton from "./pages/CenIN/PredictiveInserton";
 // import AdminRoute from "./components/Routes/AdminRoute.jsx";
 const App = () => {
   const dispatch = useDispatch();
@@ -57,13 +58,13 @@ const App = () => {
           >
             <Route path="/blog" element={<Main />} />
             <Route path="/blog/create" element={<CreateBlog />} />
-            <Route path="/blog/:id" element={<DisplayBlog/>} />
+            <Route path="/blog/:id" element={<DisplayBlog />} />
             <Route path="/myprofile" element={<MyProfile />} />
           </Route>
 
           <Route path="/galary" element={<Galary />} />
-          <Route path="/about" element={<About/>} />
-          <Route path="/contact" element={<Contact/>} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
           <Route
             element={
               <LoginRoute
@@ -73,7 +74,8 @@ const App = () => {
               />
             }
           >
-            <Route path="/admin" element={<Admin />} />
+            {/* <Route path="/admin" element={<PredictiveInserton />} /> */}
+            <Route path="/dashboard" element={<Admin />} />
             <Route path="/admin/gallery" element={<AdminGalary />} />
             <Route path="/admin/users/all" element={<AllUsers />} />
           </Route>
@@ -84,6 +86,17 @@ const App = () => {
           <Route path="/2001" element={<CenINOne />} />
           <Route path="/worldvis" element={<WorldVisual />} />
           <Route path="/preditive" element={<Predictive />} />
+          <Route
+            element={
+              <LoginRoute
+                isAuthenticated={user.isAuthenticated}
+                user={user}
+                checkAdmin={true}
+              />
+            }
+          >
+            <Route path="/admin" element={<PredictiveInserton />} />
+          </Route>
         </Route>
         <Route path="*" element={<PageNotFound />} />
       </Routes>
