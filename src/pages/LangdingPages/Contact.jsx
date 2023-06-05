@@ -112,11 +112,11 @@ const Contact = () => {
                 Lets talk about Census India !
               </h2>
               <div className="text-gray-700 mt-8">
-                Hate forms? Send us an&nbsp;
+                Send us an &nbsp;
                 <a className="underline" href="mailto:someone@gmail.com">
                   email
                 </a>
-                instead.
+                &nbsp; instead.
               </div>
             </div>
             <div className="mt-12 text-center">
@@ -172,7 +172,7 @@ const Contact = () => {
             </div>
             <div className="mt-8">
               <button
-                className="uppercase text-sm font-bold tracking-wide bg-indigo-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline hover:bg-indigo-700"
+                className="btn btn-secondary  w-full text-center"
                 type="submit"
               >
                 Send Message
