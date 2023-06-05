@@ -28,7 +28,7 @@ const Login = ( ) => {
       dispatch(clearErrors());
     }
     if (isAuthenticated) {
-   history("/myprofile");
+   history(-2);
     
     }
   }, [dispatch, error, isAuthenticated,history]);
