@@ -7,7 +7,7 @@ const LandingPage = () => {
   // const { some } = JSON.parse(JSON.stringify(data));
   const MainheroContent = {
     subheading: `
-            Counting everyone once, only once, and in the right place...`,
+            DATA IS THE OIL OF THE 21ST CENTURY AND DATA ANALYTICS IS THE COMBUSTION ENGINE`,
     para: `   The largest administrative and statistical exercise in the world,
             counting over 1.3 billion people.The Indian Census aims to provide a
             reliable snapshot of the country's population, its diversity, and

@@ -16,7 +16,7 @@ const Herosection = (props) => {
           <h1 className="mb-5 text-4xl font-bold lg:text-7xl">
             <MainHeading />
           </h1>
-          <h3 className="mb-5 text-2xl   text-zinc-100">
+          <h3 className="mb-5 text-2xl  lowercase italic first-letter:capitalize  text-zinc-100">
             {props.data.subheading}
           </h3>
           <p className="mb-5 font-semibold text-lg  text-zinc-100">
