@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const CardCenINLanding = ({linkto,title,image ,des}) => {
   return (
     <Link to={linkto}>
-      <div className="card card-side bg-base-100 shadow-xl shadow-base-content  m-1  p-3  :translate-x-1   ">
+      <div className="card md:card-side bg-base-100 shadow-xl shadow-base-content  m-1  p-3  :translate-x-1   ">
         <figure>
           <img
             className="mask mask-parallelogram  w-72 h-72 "
@@ -13,9 +13,9 @@ const CardCenINLanding = ({linkto,title,image ,des}) => {
             src={image}
           />
         </figure>
-        <div className="card-body w-1/3">
+        <div className="card-body md:w-1/3">
           <h2 className="card-title text-primary hover:btn-link"> {title}</h2>
-          <p className=' sm:hidden'>{des} </p>
+          <p className=' '>{des} </p>
           <div className="card-actions justify-end"></div>
         </div>
       </div>
