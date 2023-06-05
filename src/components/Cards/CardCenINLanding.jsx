@@ -15,7 +15,7 @@ const CardCenINLanding = ({linkto,title,image ,des}) => {
         </figure>
         <div className="card-body w-1/3">
           <h2 className="card-title text-primary hover:btn-link"> {title}</h2>
-          <p className=' sm:hidden md:hidden '>{des} </p>
+          <p className=' sm:hidden'>{des} </p>
           <div className="card-actions justify-end"></div>
         </div>
       </div>
