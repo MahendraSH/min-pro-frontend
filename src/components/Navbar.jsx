@@ -38,17 +38,17 @@ const Navbar = () => {
                 className="menu menu-compact dropdown-content shadow bg-base-100 rounded-box w-52"
               >
                 <li>
-                  <Link to="/about">about</Link>
+                  <Link to="/about">About</Link>
                 </li>
                 <li>
-                  <Link to="/contact">contact</Link>
+                  <Link to="/contact">Contact</Link>
                 </li>
 
                 <li>
-                  <Link to="/galary">Gallary</Link>
+                  <Link to="/galary">Gallery</Link>
                 </li>
                 <li>
-                  <Link to="/blog">blog</Link>
+                  <Link to="/blog">Blog</Link>
                 </li>
               </ul>
             </div>
@@ -59,18 +59,18 @@ const Navbar = () => {
             <div className="navbar-end hidden lg:flex">
               <ul className="menu menu-horizontal px-1">
                 <li>
-                  <Link to="/about">about</Link>
+                  <Link to="/about">About</Link>
                 </li>
                 <li>
-                  <Link to="/contact">contact</Link>
-                </li>
-
-                <li>
-                  <Link to="/galary">Gallary</Link>
+                  <Link to="/contact">Contact</Link>
                 </li>
 
                 <li>
-                  <Link to="/blog">blog</Link>
+                  <Link to="/galary">Gallery</Link>
+                </li>
+
+                <li>
+                  <Link to="/blog">Blog</Link>
                 </li>
               </ul>
             </div>
@@ -78,7 +78,7 @@ const Navbar = () => {
           <div className="flex-none px-3" id="login profile ">
             {isAuthenticated ? (
               <div className="dropdown dropdown-end">
-                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                <label tabIndex={0} className="btn btn-ghost btn-circle avatar online ">
                   <div className="w-10 rounded-full">
                     <img src={user.avatar.url} alt="avtar" />
                   </div>
