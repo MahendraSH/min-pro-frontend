@@ -105,7 +105,7 @@ const CreateBlog = () => {
                     onChange={setTargetImage}
                     className="file-input file-input-bordered file-input-primary
                     w-full max-w-xs"
-                  />
+                  /> <span className=" bg-info text-white rounded-full p-2"> image less than 200kb</span>
                 </div>
                 <div className="form-control">
                   <label className="label">

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { register } from "../../actions/userActions";
+import avatardemo from '../../image/Screenshot 2023-06-05 082130.png';
 
 import Loader from "../../components/Loader";
 import { enqueueSnackbar } from "notistack";
@@ -16,10 +17,12 @@ const Registor = () => {
     email: "",
     password: "",
   });
-  const [avatar, setAvatar] = useState("");
+  const [avatar, setAvatar] = useState(avatardemo);
   const { name, email, password } = user;
 
   const registerDataChange = (e) => {
+    
+      enqueueSnackbar("avatar size less then 100 kb ", { variant: "info" }); 
     const reader = new FileReader();
 
     reader.onload = () => {
@@ -119,7 +122,7 @@ const Registor = () => {
                       onChange={registerDataChange}
                       className="file-input file-input-bordered file-input-primary
                     w-full max-w-xs"
-                    />
+                    />  
                   </div>
                   <div className="form-control">
                     <label className="label">
