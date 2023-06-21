@@ -58,9 +58,9 @@ const CreateBlog = () => {
       {loading ? (
         <Loader />
       ) : (
-        <div className="container ">
-          <div className="card  w-10/12 flex justify-center  mx-auto mt-10   bg-base-100">
-            <div className="card-body  shadow-xl shadow-base-content">
+        <div className="container mx-auto">
+          <div className="flex justify-center w-10/12 mx-auto mt-10 card bg-base-100">
+            <div className="shadow-xl card-body shadow-base-content">
               <form onSubmit={onSubmitRegistoHandler}>
                 <div className="form-control">
                   <label className="label">
@@ -103,9 +103,8 @@ const CreateBlog = () => {
                     accept="image/*"
                     name="mainImage"
                     onChange={setTargetImage}
-                    className="file-input file-input-bordered file-input-primary
-                    w-full max-w-xs"
-                  /> <span className=" bg-info text-white rounded-full p-2"> image less than 200kb</span>
+                    className="w-full max-w-xs file-input file-input-bordered file-input-primary"
+                  /> <span className="p-2 text-white rounded-full bg-info"> image less than 200kb</span>
                 </div>
                 <div className="form-control">
                   <label className="label">
@@ -133,7 +132,7 @@ const CreateBlog = () => {
                     }
                   />
                 </div>
-                <div className="form-control mt-6">
+                <div className="mt-6 form-control">
                   <button type="submit" className="btn btn-primary">
                     create blog
                   </button>

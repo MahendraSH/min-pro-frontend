@@ -61,12 +61,12 @@ const Registor = () => {
         <Loader />
       ) : (
         <div
-          className="hero min-h-screen bg-base-200"
+          className="min-h-screen hero bg-base-200"
           // style={{
           //   backgroundImage: `url("https://res.cloudinary.com/dranaclni/image/upload/v1684320559/cenIN/MainHero_esipxn.png")`,
           // }} // with bag  text-slate-200
         >
-          <div className="hero-content flex-col ">
+          <div className="flex-col hero-content ">
             <div className="text-center lg:text-left">
               <h1 className="text-5xl font-bold">
                 Register now! Welcome to CenIN
@@ -77,8 +77,8 @@ const Registor = () => {
                 repudiandae et a id nisi.
               </p> */}
             </div>
-            <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-              <div className="card-body  shadow-xl shadow-base-content">
+            <div className="flex-shrink-0 w-full max-w-sm shadow-2xl card bg-base-100">
+              <div className="shadow-xl card-body shadow-base-content">
                 <form onSubmit={onSubmitRegistoHandler}>
                   <div className="form-control">
                     <label className="label">
@@ -120,8 +120,7 @@ const Registor = () => {
                       name="avatar"
                       accept="image/*"
                       onChange={registerDataChange}
-                      className="file-input file-input-bordered file-input-primary
-                    w-full max-w-xs"
+                      className="w-full max-w-xs file-input file-input-bordered file-input-primary"
                     />  
                   </div>
                   <div className="form-control">
@@ -153,7 +152,7 @@ const Registor = () => {
                       </Link>
                     </label>
                   </div>
-                  <div className="form-control mt-6">
+                  <div className="mt-6 form-control">
                     <button className="btn btn-primary">register</button>
                   </div>
                 </form>
